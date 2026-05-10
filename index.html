@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <span class="nav-logo">PRAVEEN KUMAR S</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#learning">Learning</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Say Hello</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-tag">1st Year AI&DS Student · Open to Opportunities</div>
+    <h1 class="hero-title">
+      <span class="line">PRAVEEN</span>
+      <span class="line italic">KUMAR S</span>
+    </h1>
+    <p class="hero-sub">Aspiring Full-Stack Developer &amp; Lifelong Learner</p>
+    <div class="hero-quote">"Every expert was once a beginner."</div>
+    <div class="hero-scroll">scroll ↓</div>
+    <div class="hero-bg-text">STUDENT</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">01 — About Me</div>
+    <div class="about-grid">
+      <div class="about-left">
+        <h2>Curious.<br /><em>Driven.</em><br />Building my path.</h2>
+      </div>
+      <div class="about-right">
+        <p>Hi! I'm a first-year Artificial Intelligence and Data Science student passionate about technology and how software shapes the world. I'm currently on a journey to become a full-stack developer — learning every day, one line of code at a time.</p>
+        <p>I may not have professional experience yet, but I bring enthusiasm, a hunger to learn, and a strong foundation in fundamentals. I'm looking for internships, open-source contributions, and collaborative projects where I can grow.</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">1st</span><span class="stat-label">Year student</span></div>
+          <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Months coding</span></div>
+          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Curiosity</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-label">02 — Education</div>
+    <h2 class="section-title">Where I Study</h2>
+    <div class="edu-card reveal">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-body">
+        <div class="edu-degree">Bachelor of Engineering — Artificial Intelligence and Data Science</div>
+        <div class="edu-school">Bannari Amman Institute of Technology</div>
+        <div class="edu-year">2025 – 2029 · Currently in 1st Year</div>
+        <div class="edu-courses">
+          <div class="course-label">Relevant Coursework</div>
+          <div class="course-tags" id="courses-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-sub-title">Certifications &amp; Courses</div>
+    <div class="certs-grid" id="certs-grid"></div>
+  </section>
+
+  <!-- WHAT I'M BUILDING -->
+  <section id="learning">
+    <div class="section-label">03 — Projects &amp; Practice</div>
+    <h2 class="section-title">What I'm Building</h2>
+    <p class="section-note">These are beginner projects and exercises I've built while learning — small steps, real code.</p>
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">04 — Skills</div>
+    <h2 class="section-title">What I Know<br /><em>So Far</em></h2>
+    <div class="skills-columns">
+      <div class="skill-col">
+        <h4>Languages</h4>
+        <ul>
+          <li><span>C</span><div class="bar"><div class="fill" style="width:65%"></div></div></li>
+          <li><span>Python</span><div class="bar"><div class="fill" style="width:55%"></div></div></li>
+          <li><span>HTML &amp; CSS</span><div class="bar"><div class="fill" style="width:70%"></div></div></li>
+          <li><span>JavaScript</span><div class="bar"><div class="fill" style="width:40%"></div></div></li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Tools &amp; Platforms</h4>
+        <ul>
+          <li><span>Git &amp; GitHub</span><div class="bar"><div class="fill" style="width:50%"></div></div></li>
+          <li><span>VS Code</span><div class="bar"><div class="fill" style="width:80%"></div></div></li>
+          <li><span>Linux (basics)</span><div class="bar"><div class="fill" style="width:35%"></div></div></li>
+          <li><span>Figma (basics)</span><div class="bar"><div class="fill" style="width:30%"></div></div></li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Currently Learning</h4>
+        <ul class="learning-list">
+          <li>📖 JavaScript (DOM &amp; APIs)</li>
+          <li>📖 React.js fundamentals</li>
+          <li>📖 Data Structures &amp; Algorithms</li>
+          <li>📖 Node.js &amp; Express basics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">05 — Contact</div>
+    <h2 class="contact-title">Let's connect<br /><em>&amp; grow together.</em></h2>
+    <p class="contact-note">Whether it's an internship opportunity, a beginner-friendly open-source project, or just a conversation about tech — I'd love to hear from you!</p>
+    <form id="contact-form" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Hello! I'd like to..." required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message →</button>
+      <p id="form-status" class="form-status"></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">PRAVEEN KUMAR S</span>
+    <p class="footer-links">
+      <a href="https://github.com/praveenkumars-cmd" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/praveenkumars07" target="_blank">LinkedIn</a>
+      <a href="mailto:praveenkumars002008@email.com">Email</a>
+    </p>
+    <p class="footer-copy">Made with ❤️ while learning to code · 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
