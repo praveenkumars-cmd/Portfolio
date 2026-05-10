@@ -11,7 +11,7 @@ const certifications = [
     icon: "🐍",
     name: "Python for Everybody",
     by: "Coursera · University of Michigan",
-    status: "done"
+    status: "progress"
   },
   {
     icon: "🌐",
@@ -39,7 +39,7 @@ const projects = [
     title: "My First Website",
     desc: "A static personal webpage built while learning HTML & CSS basics. Practiced layouts, colors, and typography.",
     stack: ["HTML", "CSS"],
-    wip: false,
+    wip: true,
     link: "#"
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     title: "Calculator App",
     desc: "A command-line calculator in Python handling arithmetic operations. My first real program after learning conditionals and functions.",
     stack: ["Python"],
-    wip: false,
+    wip: true,
     link: "#"
   },
   {
@@ -55,7 +55,7 @@ const projects = [
     title: "Student Grade System",
     desc: "A C program that accepts student marks and calculates grades and averages. Built as part of my first semester coursework.",
     stack: ["C"],
-    wip: false,
+    wip: true,
     link: "#"
   },
   {
