@@ -11,7 +11,7 @@ const certifications = [
     icon: "🐍",
     name: "Python for Everybody",
     by: "Coursera · University of Michigan",
-    status: "progress"
+    status: "done"
   },
   {
     icon: "🌐",
@@ -161,7 +161,15 @@ const barObserver = new IntersectionObserver(entries => {
 const skillsSection = document.getElementById("skills");
 if (skillsSection) barObserver.observe(skillsSection);
 
-/* ===== CONTACT FORM ===== */
+/* ===== CONTACT FORM (Formspree — no backend needed) =====
+   SETUP (one time, free):
+   1. Go to https://formspree.io and sign up with your email
+   2. Click "New Form" → give it any name → copy the form endpoint URL
+   3. Replace YOUR_FORM_ID below with your actual ID (e.g. xpzgkrjv)
+   Every message will be emailed directly to you. That's it!
+======================================================== */
+const FORMSPREE_URL = "https://formspree.io/f/xqenglev"; // 
+
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
@@ -173,24 +181,31 @@ if (form) {
     btn.textContent = "Sending...";
     status.textContent = "";
 
-    const body = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      message: form.message.value.trim()
-    };
+    const data = new FormData(form);
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(FORMSPREE_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body)
+        body: data,
+        headers: { "Accept": "application/json" }
       });
+
       if (res.ok) {
-        status.textContent = "Message sent! I'll reply soon 😊";
+        status.textContent = "✓ Message sent! I'll reply soon 😊";
+        status.style.color = "#7ab87a";
         form.reset();
-      } else throw new Error();
+      } else {
+        const json = await res.json();
+        // Formspree not configured yet — show helpful message
+        if (json.errors) {
+          status.textContent = "⚠️ Form not set up yet. Please replace YOUR_FORM_ID in script.js";
+        } else {
+          throw new Error();
+        }
+      }
     } catch {
-      status.textContent = "Something went wrong. Try emailing me directly!";
+      status.textContent = "Something went wrong. Email me directly instead!";
+      status.style.color = "#c9a84c";
     } finally {
       btn.disabled = false;
       btn.textContent = "Send Message →";
